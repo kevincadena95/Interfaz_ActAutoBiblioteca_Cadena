@@ -123,7 +123,7 @@ async function listarAutores() {
                 <td>${a.nombre}</td>
                 <td>${a.apellido}</td>
                 <td>${a.biografiaCorta || ""}</td>
-                <td>${a.perfil ? a.perfil.id + " - " + a.perfil.nacionalidad : "Sin perfil"}</td>
+                <td>${a.perfil ? a.perfil.id : "Sin perfil"}</td>
                 <td>${textoLibros(a.libros)}</td>
                 <td>
                     <button onclick="eliminarAutor(${a.id})">
