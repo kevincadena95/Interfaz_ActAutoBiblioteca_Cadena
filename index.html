@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es">
+<link rel="stylesheet" href="style.css">
+
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Biblioteca</title>
+
+
+</head>
+
+<body>
+
+    <header class="hero">
+
+        <div class="hero-contenido">
+
+            <h1>AutoBiblioteca</h1>
+
+            <p>Sistema de Gestión de Autores, Perfiles, Libros y Categorías</p>
+
+        </div>
+
+    </header>
+
+    <main class="contenedor">
+
+        <!-- ========================= -->
+        <!-- REGISTRO DE AUTORES -->
+        <!-- ========================= -->
+
+        <section class="card">
+
+            <h2>Registro de Autores</h2>
+
+            <label for="nombreAutor">
+                Nombre
+            </label>
+
+            <input type="text" id="nombreAutor">
+
+            <label for="apellidoAutor">
+                Apellido
+            </label>
+
+            <input type="text" id="apellidoAutor">
+
+            <label for="biografiaCortaAutor">
+                Biografía corta
+            </label>
+
+            <textarea id="biografiaCortaAutor" rows="5"></textarea>
+
+            <button onclick="guardarAutor()">
+
+                Guardar Autor
+
+            </button>
+
+        </section>
+
+        <!-- ========================= -->
+        <!-- REGISTRO DE CATEGORÍAS -->
+        <!-- ========================= -->
+
+        <section class="card">
+
+            <h2>Registro de Categorías</h2>
+
+            <label for="nombreCategoria">
+                Nombre de categoría
+            </label>
+
+            <input type="text" id="nombreCategoria">
+
+            <label for="descripcionCategoria">
+                Descripción
+            </label>
+
+            <textarea id="descripcionCategoria" rows="5"></textarea>
+
+            <button onclick="guardarCategoria()">
+
+                Guardar Categoría
+
+            </button>
+
+        </section>
+
+        <!-- ========================= -->
+        <!-- REGISTRO DE PERFILES -->
+        <!-- ========================= -->
+
+        <section class="card">
+
+            <h2>Registro de Perfiles</h2>
+
+            <label for="fechaNacimiento">
+                Fecha de nacimiento
+            </label>
+
+            <input type="date" id="fechaNacimiento">
+
+            <label for="fechaFallecimiento">
+                Fecha de fallecimiento
+            </label>
+
+            <input type="date" id="fechaFallecimiento">
+
+            <label for="nacionalidad">
+                Nacionalidad
+            </label>
+
+            <input type="text" id="nacionalidad">
+
+            <label for="ocupacion">
+                Ocupación
+            </label>
+
+            <input type="text" id="ocupacion">
+
+            <label for="reconocimientos">
+                Reconocimientos
+            </label>
+
+            <textarea id="reconocimientos" rows="5"></textarea>
+
+            <label for="autorPerfil">
+                Autor relacionado
+            </label>
+
+            <select id="autorPerfil">
+
+                <option value="">
+
+                    Seleccione un autor
+
+                </option>
+
+            </select>
+
+            <button onclick="guardarPerfil()">
+
+                Guardar Perfil
+
+            </button>
+
+        </section>
+
+        <!-- ========================= -->
+        <!-- REGISTRO DE LIBROS -->
+        <!-- ========================= -->
+
+        <section class="card">
+
+            <h2>Registro de Libros</h2>
+
+            <label for="titulo">
+                Título
+            </label>
+
+            <input type="text" id="titulo">
+
+            <label for="isbn">
+                ISBN
+            </label>
+
+            <input type="text" id="isbn">
+
+            <label for="sinopsis">
+                Sinopsis
+            </label>
+
+            <textarea id="sinopsis" rows="5"></textarea>
+
+            <label for="fechaPublicacion">
+                Fecha de publicación
+            </label>
+
+            <input type="date" id="fechaPublicacion">
+
+            <label for="precio">
+                Precio
+            </label>
+
+            <input type="number" id="precio" step="0.01">
+
+            <label for="stock">
+                Stock
+            </label>
+
+            <input type="number" id="stock">
+
+            <label for="autorLibro">
+                Autor relacionado
+            </label>
+
+            <select id="autorLibro">
+
+                <option value="">
+
+                    Seleccione un autor
+
+                </option>
+
+            </select>
+
+            <label for="categoriasLibro"> Categorías relacionadas </label> 
+            
+            <select id="categoriasLibro" multiple size="5">
+                <option value=""> Seleccione una o varias categorías </option>
+            </select>
+
+            <button onclick="guardarLibro()">
+
+                Guardar Libro
+
+            </button>
+
+        </section>
+
+    </main>
+
+    <!-- ========================= -->
+    <!-- TABLAS DE REGISTROS -->
+    <!-- ========================= -->
+
+    <section class="listas">
+
+        <!-- TABLA AUTORES -->
+
+        <div class="tabla-card">
+
+            <div class="titulo-tabla">
+
+                <h2>Autores Registrados</h2>
+
+                <button onclick="listarAutores()">
+
+                    Actualizar
+
+                </button>
+
+            </div>
+
+            <table id="tablaAutores"></table>
+
+        </div>
+
+        <!-- TABLA CATEGORÍAS -->
+
+        <div class="tabla-card">
+
+            <div class="titulo-tabla">
+
+                <h2>Categorías Registradas</h2>
+
+                <button onclick="listarCategorias()">
+
+                    Actualizar
+
+                </button>
+
+            </div>
+
+            <table id="tablaCategorias"></table>
+
+        </div>
+
+        <!-- TABLA PERFILES -->
+
+        <div class="tabla-card">
+
+            <div class="titulo-tabla">
+
+                <h2>Perfiles Registrados</h2>
+
+                <button onclick="listarPerfiles()">
+
+                    Actualizar
+
+                </button>
+
+            </div>
+
+            <table id="tablaPerfiles"></table>
+
+        </div>
+
+        <!-- TABLA LIBROS -->
+
+        <div class="tabla-card">
+
+            <div class="titulo-tabla">
+
+                <h2>Libros Registrados</h2>
+
+                <button onclick="listarLibros()">
+
+                    Actualizar
+
+                </button>
+
+            </div>
+
+            <table id="tablaLibros"></table>
+
+        </div>
+
+    </section>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
+```

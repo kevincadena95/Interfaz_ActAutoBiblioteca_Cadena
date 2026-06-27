@@ -1,0 +1,172 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e8f6ff;
+    color: #0b2545;
+}
+
+
+.contenedor {
+    width: 95%;
+    max-width: 1300px;
+    margin: 20px auto;
+}
+
+
+h1 {
+    background-color: #0066a2;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h2 {
+    background-color: #0099cc;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+h3 {
+    color: #0066a2;
+    border-bottom: 2px solid #0099cc;
+    padding-bottom: 5px;
+}
+
+
+
+section {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    border: 2px solid #0099cc;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.grupo {
+    background-color: #f0fbff;
+    border: 1px solid #66c7e8;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+
+
+label {
+    font-weight: bold;
+    color: #004b75;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 9px;
+    margin: 8px 0 15px 0;
+    border: 1px solid #0099cc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border: 2px solid #0066a2;
+}
+
+
+
+button {
+    background-color: #0099cc;
+    color: white;
+    border: none;
+    padding: 9px 14px;
+    margin: 5px 3px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #0066a2;
+}
+
+.btn-crear {
+    background-color: #00a8cc;
+}
+
+.btn-crear:hover {
+    background-color: #007da0;
+}
+
+.btn-actualizar {
+    background-color: #005f99;
+}
+
+.btn-actualizar:hover {
+    background-color: #003f66;
+}
+
+.btn-eliminar {
+    background-color: #004b75;
+}
+
+.btn-eliminar:hover {
+    background-color: #002f4f;
+}
+
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background-color: white;
+}
+
+th {
+    background-color: #0066a2;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+td {
+    border: 1px solid #b5dff0;
+    padding: 9px;
+    color: #0b2545;
+}
+
+tr:nth-child(even) {
+    background-color: #eef9ff;
+}
+
+tr:hover {
+    background-color: #d7f2ff;
+}
+
+
+.nota {
+    background-color: #d7f2ff;
+    color: #004b75;
+    padding: 10px;
+    border-left: 5px solid #0099cc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+
+
